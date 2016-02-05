@@ -30,9 +30,13 @@ class App extends Component {
 			selectedVideo: null // When app loads our selected video is null
 		};
 
-		// state will then be updated with a search and the results will be passed to the array
+		// Initial Term for search
+		this.videoSearch('surfboards');
+	}
+
+	videoSearch(term) {
 		// Fires a request to go get a list of vidoes
-		YTSearch({key: API_KEY, term: 'surfboards'}, (videos) => {
+		YTSearch({key: API_KEY, term: term}, (videos) => {
 			this.setState({
 				videos: videos, // pass the list of videos onto this.state.videos
 				selectedVideo: videos[0] // first video on the list will be set to selectedVideo
@@ -44,9 +48,12 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<SearchBar />
+				{/* Searchbar calls 'OnSearchTermChange' with a string, which will be sent to VideoSearch(term) to get the videos  */}
+				<SearchBar
+					onSearchTermChange={ term => this.videoSearch(term) }/>
 				{/* pass the video details of the first video */}
-				<VideoDetail video={this.state.selectedVideo}/>
+				<VideoDetail
+					video={this.state.selectedVideo}/>
 
 				{/* pass the videos found in search to VideoList component by passing it as a prop */}
 				<VideoList

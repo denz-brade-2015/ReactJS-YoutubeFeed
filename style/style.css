@@ -1,3 +1,6 @@
+/**
+ * Search Bar
+ */
 .search-bar {
 	margin: 20px;
 	text-align: center;
@@ -7,17 +10,12 @@
 	width: 75%;
 }
 
+/**
+ * Video List item
+ */
+
 .video-item img {
 	max-width: 64px;
-}
-
-
-
-.video-detail .details {
-	margin-top: 10px;
-	padding: 10px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
 }
 
 .list-group-item {
@@ -27,3 +25,15 @@
 .list-group-item:hover {
 	background: #eee;
 }
+
+/**
+ *  Video Detail
+ */
+
+.video-detail .details {
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+

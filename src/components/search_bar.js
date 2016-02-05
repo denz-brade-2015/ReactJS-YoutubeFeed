@@ -26,12 +26,18 @@ class SearchBar extends Component {
 			//Controlled compenent telling the input to recieve its value from state
 			<div className="search-bar">
 				<input
-					value={this.state.term}
-					onChange={ e => this.setState({ term: e.target.value})} />
+					value={ this.state.term }
+					// Whenever input is changed, it calles onInputChange with the new input value
+					onChange={ e => this.onInputChange(e.target.value) } />
 			</div>
-			);
-		}
+		);
 	}
+
+	onInputChange(term) {
+		this.setState({term});
+		this.props.onSearchTermChange(term);
+	}
+}
 
 // Allows this component to be requested by other files
 export default SearchBar;
