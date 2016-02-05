@@ -23,7 +23,7 @@ https://nodejs.org/en/
 
 
 ### Now to **Run** this and start watching your files
-` Run Npm start `
+` Run npm start `
 
 
 ### Additional Info
