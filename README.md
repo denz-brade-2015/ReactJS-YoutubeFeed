@@ -13,7 +13,7 @@ https://nodejs.org/en/
 
 * Now to Install latest version of NPM Globally
 
-&nbsp;&nbsp; ` npm install npm -g ` or ` sudo npm install npm -g `
+&nbsp;&nbsp; ` npm install -g ` or ` sudo npm install -g `
 
 
 ### Now Lets set up the project
