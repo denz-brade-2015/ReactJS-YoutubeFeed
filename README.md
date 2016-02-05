@@ -31,3 +31,5 @@ Make sure you have a Google Developers Account so you can generate your own API 
 Find here: https://console.developers.google.com
 
 Add the API key to the line inside index.js ` const API_KEY = '' `
+
+To view the page navigate to ` http://localhost:8080/ ` in your URL
