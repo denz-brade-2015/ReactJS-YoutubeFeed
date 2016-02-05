@@ -24,7 +24,7 @@ class SearchBar extends Component {
 
 		return  (
 			//Controlled compenent telling the input to recieve its value from state
-			<div>
+			<div className="search-bar">
 				<input
 					value={this.state.term}
 					onChange={ e => this.setState({ term: e.target.value})} />
