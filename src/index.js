@@ -1,4 +1,5 @@
 // Import Packages & Modules
+import _ from 'lodash';
 import React, { Component} from 'react'; // Create and manage components
 import ReactDOM from 'react-dom'; // Renders Components to the DOM
 import YTSearch from 'youtube-api-search';
@@ -46,11 +47,17 @@ class App extends Component {
 	}
 
 	render() {
+		// we create a function '(term) => {
+		// 		this.videoSearch(term)
+		// }'
+		// We then pass it to debounce, It will create a new function which will only call it once every 300 miliseconds
+		const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
+
 		return (
 			<div>
 				{/* Searchbar calls 'OnSearchTermChange' with a string, which will be sent to VideoSearch(term) to get the videos  */}
 				<SearchBar
-					onSearchTermChange={ term => this.videoSearch(term) }/>
+					onSearchTermChange={ videoSearch }/>
 				{/* pass the video details of the first video */}
 				<VideoDetail
 					video={this.state.selectedVideo}/>
