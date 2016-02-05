@@ -15,7 +15,7 @@ import VideoDetail from './components/video_detail';
  */
 
 // api key which will allow us to make requests to youtube (https://console.developers.google.com/s)
-const API_KEY = 'AIzaSyBmDx_9BYbX9dxoMpiMS0KzupiDEH52YYg';
+const API_KEY = ' ';
 
 
 // Create a new component. This componenet should produce some HTML
